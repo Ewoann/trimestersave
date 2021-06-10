@@ -101,17 +101,17 @@ class Mother extends \yii\db\ActiveRecord
 
      public function beforeValidate() {
     if ($this->isNewRecord) {
-        $this->id= Utility->getInstance()->randomString(10);
+       // $this->id= Utility->getInstance()->randomString(10);
         $this->created= new Date();
         $this->modified=new Date();
     }
     return parent::beforeValidate();
 }
-  public function beforeSave() {
-    if (!$this->isNewRecord) {
+//   public function beforeSave() {
+//     if (!$this->isNewRecord) {
       
-        $this->modified=new Date();
-    }
-    return parent::beforeSave();
-}
+//         $this->modified=new Date();
+//     }
+//     return parent::beforeSave();
+// }
 }
